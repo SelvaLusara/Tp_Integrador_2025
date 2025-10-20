@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="/Css/style.css">
   <script defer src="/Js/Carousel.js"></script>
 </head>
+
 <body>
   <header>
     <nav class="navbar">
@@ -15,45 +17,117 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="menu.html">Menú</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#contactoBajo">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <!-- Carrusel -->
-    <section class="carousel">
+    <div class="carousel">
       <button id="prev">⟨</button>
-      <img id="carousel-img" src="img/c1.jpg" alt="Plato destacado">
-      <button id="next">⟩</button>
-    </section>
 
-    <section class="intro">
-      <h2>Bienvenidos a López Lusara</h2>
-      <p>Un bodegón con alma porteña, donde la tradición y el sabor se encuentran en cada plato. Desde 1987 ofrecemos cocina casera, vinos seleccionados y el calor del encuentro.</p>
-    </section>
-
-    <section class="destacados">
-      <div class="plato">
-        <img src="img/plato1.jpg" alt="Milanesa napolitana">
-        <h3>Milanesa Napolitana</h3>
-        <p>Clásico porteño con papas fritas doradas.</p>
+      <div class="carousel-track">
+        <img class="carousel-img" src="/img/pizza napolitana.jpg" alt="Pizza napolitana">
+        <img class="carousel-img" src="/img/empanadas.jpg" alt="Empanadas criollas">
+        <img class="carousel-img" src="/img/Milanesa Napolitana.jpg" alt="Milanesa napolitana">
+        <img class="carousel-img" src="/img/Tortilla de papa.jpg" alt="Tortilla de papa">
       </div>
+
+      <button id="next">⟩</button>
+    </div>
+
+    <!-- Intro -->
+    <div class="intro">
+      <h2>Bienvenidos a López Lusara</h2>
+      <p>
+        Un bodegón con alma sanluiseña, donde la tradición y el sabor
+        se encuentran en cada plato. Desde 1987 ofrecemos cocina casera,
+        vinos seleccionados y el calor del encuentro.
+      </p>
+    </div>
+  </main>
+
+
+  <!-- Platos destacados -->
+  <div>
+    <div class="destacados">
       <div class="plato">
-        <img src="img/plato2.jpg" alt="Empanadas criollas">
+        <img src="/img/Milanesa Napolitana.jpg" alt="Milanesa napolitana" width="400" height="300">
+        <h3>Milanesa Napolitana</h3>
+        <p>Un clásico de la mesa acompañado con papas fritas doradas.</p>
+      </div>
+
+      <div class="plato">
+        <img src="/img/empanadas criollas.jpg" alt="Empanadas criollas" width="400" height="300">
         <h3>Empanadas Criollas</h3>
         <p>Receta de la abuela con carne cortada a cuchillo.</p>
       </div>
+
       <div class="plato">
-        <img src="img/plato3.jpg" alt="Pasta casera">
+        <img src="/img/ravioles.jpg" alt="Pasta casera" width="400" height="300">
         <h3>Pasta Casera</h3>
         <p>Ravioles rellenos con salsa bolognesa artesanal.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+  <div id="contactoBajo" class="contacto">
+
+    <div>
+      <h2>Dejanos un comentario</h2>
+      <form id="formulario-contacto">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required maxlength="50">
+
+        <label>Email:</label>
+        <input type="email" id="email" required pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$">
+
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono" required pattern="^[0-9]{10}$" maxlength="10" placeholder="Ej: 1123456789">
+
+        <label>Mensaje:</label>
+        <textarea id="mensaje" maxlength="300"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="errores"></div>
+      <div id="resultado"></div>
+    </div>
+    <div>
+      <H2>HORARIOS</H2>
+      <div>
+        <UL style="list-style-type: none">
+          <li>Lunes: 8:00 a 23:30</li>
+          <li>Martes: 8:00 a 23:30</li>
+          <li>Miercoles: 8:00 a 23:30</li>
+          <li>Jueves: 8:00 a 23:30</li>
+          <li>Viernes: 10:00 a 23:30</li>
+          <li>Sabado: 10:00 a 23:30</li>
+          <li>Domingo: 11:00 a 23:30</li>
+        </UL>
+
+        <H2>RESERVA TU MESA</H2>
+        <UL style="list-style-type: none">
+
+          <li>2657773311</li>
+          <li>2664854371</li>
+        </UL>
+      </div>
+      <div>
+        <H2>Ubicacion</H2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.896824822412!2d-65.46978152465906!3d-33.68573565056642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16a9aca525613%3A0x1541182218ac0f9c!2sLavalle%20%26%20Tucum%C3%A1n%2C%20D5732%20Villa%20Mercedes%2C%20San%20Luis!5e0!3m2!1ses!2sar!4v1760991019694!5m2!1ses!2sar"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 Bodegón López Lusara | Todos los derechos reservados</p>
   </footer>
 </body>
+
 </html>
